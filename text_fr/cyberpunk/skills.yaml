@@ -1,0 +1,31 @@
+Compétencces d'intéligence:
+- !skill
+    name: "Natation"
+    desc: "Capacité a nager"
+- !skill
+    name: "Arme à feux"
+    desc: "MAitrise des armes a feux en tout genre"
+
+Compétencces de dexterité:
+    - !skill
+        name: "Natation"
+        desc: "Capacité a nager"
+    - !skill
+        name: "Arme à feux"
+        desc: "MAitrise des armes a feux en tout genre"
+
+Compétencces de constitution:
+    - !skill
+        name: "Natation"
+        desc: "Capacité a nager"
+    - !skill
+        name: "Arme à feux"
+        desc: "MAitrise des armes a feux en tout genre"
+
+Compétencces de charisme:
+    - !skill
+        name: "Natation"
+        desc: "Capacité a nager"
+    - !skill
+        name: "Arme à feux"
+        desc: "MAitrise des armes a feux en tout genre"

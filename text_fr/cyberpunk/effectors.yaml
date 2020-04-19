@@ -1,0 +1,19 @@
+
+- !effector
+  name: "Etanche"
+  desc: "L'équipement est capable de fonctioner sous l'eau"
+  effect : 2.0
+- !effector
+  name: "Longue portée"
+  desc: "L'équipement est utilisable a distance"
+  effect : 2.0
+- !effector
+  name: "Très longue portée"
+  desc: "L'équipement est utilisable a très grande distance"
+  effect : 5.0
+- !effector
+  name: "Usage unique"
+  desc: "L'équipement n'est utilisable qu'une fois"
+  effect: 0.1
+
+
