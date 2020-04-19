@@ -16,7 +16,7 @@ class Item:
         self.effects = effects
         self.effectors = effectors
 
-    def get_cost(self):
+    def __get_cost(self):
         cost = 0
         for effect in self.effects.values():
             cost += effect * (effect - 1) / 2
@@ -25,11 +25,12 @@ class Item:
         return int(cost)
 
     def add_to_book(self, book: Book):
+
         book.append(NoEscape("\\noindent\\makebox[\\linewidth]{\\rule{\\columnwidth}{0.4pt}}"))
         book.append(LineBreak())
         book.append(bold(self.name))
         book.append(NoEscape("\\hspace*{\\fill}"))
-        book.append(bold(self.get_cost()))
+        book.append(bold(self.__get_cost()))
         book.append(" ¥€$")
 
         book.append(LineBreak())
@@ -37,34 +38,6 @@ class Item:
         book.append(NewLine())
 
         book.append(NewLine())
-
-
-class ItemList:
-    def __init__(self, name, yaml_node):
-        print(str(yaml_node))
-        self.name = name
-        self.items = yaml_node
-
-
-    def add_to_book(self, book: Book):
-        with book.create(Subsection(self.name)):
-            for item in self.items:
-                item.add_to_book(book)
-
-
-
-
-class ItemsFile:
-    def __init__(self, filename):
-        yaml_doc = yaml.load(open(filename, mode='r', encoding="utf-8"), Loader=yaml.FullLoader)
-        self.itemlists = []
-
-        for list_name in yaml_doc:
-            self.itemlists.append(ItemList(list_name, yaml_doc[list_name]))
-
-    def add_to_book(self, book: Book):
-        for itemlist in self.itemlists:
-            itemlist.add_to_book(book)
 
 
 def item_constructor(loader, node):
@@ -76,12 +49,12 @@ def item_constructor(loader, node):
     modifiers = []
 
     for effect in values['effects']:
-        for name in effect:
-            effects[name] = int(effect[name])
+        for effect_name in effect:
+            effects[effect_name] = int(effect[effect_name])
 
     try:
-        for name in values['modifs']:
-            modifiers.append(get_effector(name))
+        for modif_name in values['modifs']:
+            modifiers.append(get_effector(modif_name))
     except KeyError:
         # An item may have no modifs
         pass

@@ -1,0 +1,13 @@
+'Outils':
+    - !item
+        name : 'Multitool'
+        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+        effects:
+            - 'Attaque' : +2
+            - 'Bricolage': +2
+
+    - !item
+        name: 'Machette'
+        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
+        effects:
+            - 'Attaque': +4
