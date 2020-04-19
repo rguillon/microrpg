@@ -1,0 +1,9 @@
+
+Items: 'Pistolets'
+    Item: 'Beretha 9mm'
+        Desc: 'Pistolet  9mm B'
+        Effects:
+            - Attaque: +5
+        Modifs:
+            - 'Long portée' 
+

@@ -1,0 +1,208 @@
+\documentclass[a4paper,twocolumn]{article}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+\geometry{
+ left=20mm,
+ top=20mm,
+ right=20mm,
+ bottom=20mm
+ }
+
+\renewcommand{\sfdefault}{phv}
+
+\begin{document}
+
+
+\section{Les personages} 
+
+Chaque personnage est représenté par:
+
+- Ses caractéristiques, qui determient ses capacitées naturelles
+
+- Ses compétences et ses équipements qui vont l'aider a réaliser ses taches
+
+- Ses points de santé physique et santé mentale, qui determine sa capacité a encaisser les coups et le stress. 
+
+
+\section{Les caractéritiques}
+
+Il y a quatre caractéristiques : la constitutuon, la dexterité, l'inteligence et le charisme. Chaque personage dispose d'un certain nombre de point dans chacune qui vont representer ou se situent ses capacitées.
+
+- \textbf{CONS}: La constitution est la force physique du personage, sa capacité a soulever des charges ou a fraper.
+
+- \textbf{DEXT}: La dexterité represente l'adresse et l'agilité.
+
+- \textbf{INTE}: L'inteligence est la capacité a comprendre, résoudre des problemes et apprendre.
+
+- \textbf{CHAR}: Le charisme est la TODO
+
+Chaque jet d'action va necessairement utiliser l'une des quatre caracteristiques. En cas s'ambiguité, c'est le MJ qui determine laquelle utiliser. Le jet d'action consiste a lancer autant de dés que le niveau de la caractéristique utilisée.
+	
+ex: pour grimper sur le toit d'un batiment, un personnage peut utiliser sa force ou sa dexterité, en accord avec le MJ. 
+
+\section{Les compétences}
+
+Les compétences sont des capacités particulieres dans un dommaine plus ciblé. Elles sont apprises, un personage peut en obtenir de nouvelles ou améliorer celles qu'il posede déja. Une compétence a un niveau, ce niveau détermine le nombre de dés supplementaires lancés lorsqu'elle est utilisés.
+Chaque personnage dispose de points de compétences a dépenser: il faut dépenser N points de compétences pour en faire passer une du niveau N-1 à N. Il faut donc dépensenser N*(N-1)/2 points de compétences pour aquerir une nouvelle compétence de niveau N.
+
+ex: avec une agilité à 4 et une compétence d'escalade a 3, le personnage dispose de 7 dés pour tenter de grimper sur le toit du batiment.
+
+\section{Les équipements}
+
+Comme les compétences, les équipement procurent des bonus rattachés a une caractéristique. Un seul équipement peut etre utilisé par jet. Le cout en points d'équipements est le meme que pour les compétences: N*(N-1)/2 pour un effet de niveau N. Un équipement peut éventuelement disposer de plusieurs bonus, mais un seul est utilisable par jet, le cout total est le cumul des couts de chaque bonus. 
+
+Les points d'équipement representent l'argent, le MJ indique le taux de change entre un point et la monais utilisée.
+
+ex: avec une agilité a 4, une compétence escalade à 3 et une corde et baudrier à DEXT+4, le personnage dispose desormais de 11 dés.
+
+Un équipement peut disposer d'un bonus a effet permanent, qui va directement modifier l'une des caractéristiques tant que le personnage le pocede. Ces bonus permaments peuvent etre des malus. 
+
+ex: une tres grosse épée a un bonus de +7 en attaque et -1 permanant en DEX: lors de son utilisation, le bonus effectif est donc de +6, en revanche elle impose un -1 a tout les jets de dexterite: elle est telement encombrante qu'elle gene son utilisateur. 
+
+\section{La résulution des ations}
+	
+Les actions se resolvent par jet de dés à 6 faces de la maniere suivante: 
+
+* Un 1,2, 3 ou 4 sont des echecs
+* Un 5 rapporte 1 succes
+* Un 6 rapporte 2 succes
+	
+Chaque dé a donc une esperance d'un demi succes.
+	
+Le nombre de dés a lancé est determiné par: la caracteristique utilisée plus eventuelement une compétence et/ou un objet qui viendront augmenter le nombre de dés enfin chaque point de bléssure physique et psychoogique va soustraire un dé au lancé.
+	
+\subsection{Actions simples}
+Le personnage effectue son jet, totalise ses succes et indique son score au MJ qui decide si l'action est réusie.
+	
+ex: avec une agilité a 4, une compétence escalade à 3 et une corde et baudrier à DEXT+4, le personnage dispose desormais de 11 dés. Il effectue son jet et n'obtient que 3 succes, trop peu au gout du MJ qui décide que le personnage chute et prends deux points de bléssure. S'il fait une seconde tentative, il n'aura plus que 9 dés.
+
+\subsection{Action en oposition}
+Les deux personnages effectuent leurs jets. Le plus haut score l'importe.
+
+\subsection{Combats}
+Il s'agit d'une action en oppisition particuliere, il y a un attaquant et un defensseur a chaque jet. Si le score de l'attaquant dépasse celui du defensseur, ce dernier prends l'ecart des scores en points de dégats.
+
+Un personnage bléssé lancera moins de dés, si la bléssure est suffisement grave, il est possible qu'il n'ai aucun dés a lancer pour son jet: il est trop amoché pour pouvoir faire quoi que ce soit. Si le nombre de points de dégats physique devient superieur ou égal au points de vie, le personnage meur. Si ses dégats psychologiques dépassent sa santé mentale, il devient fou et le MJ en prends le controle.
+
+
+ 
+\pagebreak
+	
+\begin{landscape}
+
+\begin{multicols}{2}
+
+\pagenumbering{gobble}
+
+\noindent\begin{tabularx}{\columnwidth}{|l|X|}
+	\hline
+	\cellcolor{black!10} 
+	\texttt{NOM}& \\
+	\hline
+	\cellcolor{black!10} 
+	\texttt{JOUEUR}&\\
+	\hline
+\end{tabularx}
+
+
+\noindent\begin{tabularx}{\columnwidth}{|X|}
+	\hline
+	\cellcolor{black!10} 
+	Biographie:\\
+	 \\[180pt]  \\ \hline
+\end{tabularx}
+
+
+\noindent\begin{tabularx}{\columnwidth}{|X|}
+	\hline
+	\cellcolor{black!10} 
+	Personalité: \\
+	 \\[190pt]  \\ \hline
+\end{tabularx}
+
+
+\columnbreak
+
+\noindent\begin{tabularx}{\columnwidth}{|l|X|l|X|}
+	\hline
+	\cellcolor{black!10} 
+	CONST &   &	
+	\cellcolor{black!10} 
+	INTEL &  \\
+	\hline
+	\cellcolor{black!10} 
+	DEXT &  & 
+	\cellcolor{black!10} 	
+	CHAR &   \\ 
+	\hline
+	\cellcolor{black!10} 
+	Sante physique& &
+	\cellcolor{black!10} 
+	Santé mentale &   \\
+	\hline
+\end{tabularx}
+
+\noindent\begin{tabularx}{\columnwidth}{|X|r|}
+	\hline
+	\cellcolor{black!10} 
+	Competences: & 
+	\cellcolor{black!10} 
+	Niv\\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+\end{tabularx}
+
+\vspace{3pt} 	
+
+\noindent\begin{tabularx}{\columnwidth}{|X|r|}
+	\hline
+	\cellcolor{black!10} 
+	Equipements: &
+	\cellcolor{black!10} 
+	Niv\\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+	 & \\ \hline
+\end{tabularx}
+
+\pagebreak
+
+\end{multicols}
+
+
+\end{landscape}
+
+\end{document}
+
