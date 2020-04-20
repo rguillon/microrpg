@@ -1,15 +1,11 @@
-from pylatex import Section, Subsection, Subsubsection
 import yaml
-
-from pylatex import Document, Tabularx, NoEscape
-from pylatex.utils import bold
-from pylatex.basic import *
+from pylatex import Section, Subsection, Subsubsection, NoEscape
 
 from .book import Book
 
 
 class SubList:
-    def __init__(self, depth,  name, items):
+    def __init__(self, depth, name, items):
         self.depth = depth
         self.name = name
         self.items = {}
@@ -19,28 +15,32 @@ class SubList:
             except AttributeError:
                 self.items[item] = SubList(depth + 1, item, items[item])
 
-    def __get_sub_section_for_depth(self):
+    def __get_sub_section_form_depth(self):
         if self.depth == 0:
             return Section(self.name)
-        elif  self.depth == 1:
+        elif self.depth == 1:
             return Subsection(self.name)
-        elif  self.depth == 21:
-            return Subsection(self.name)
+        elif self.depth == 2:
+            return Subsubsection(self.name)
+
+    def __add_items(self, elem):
+        for item in self.items:
+            try:
+                self.items[item].add_to_book(elem)
+            except TypeError:
+                item.add_to_book(elem)
 
     def add_to_book(self, book: Book):
         if self.name is not None:
-            with book.create(self.__get_sub_section_for_depth()):
-                for item in self.items:
-                    try:
-                        self.items[item].add_to_book(book)
-                    except TypeError:
-                        item.add_to_book(book)
+            section = self.__get_sub_section_form_depth()
+            if self.depth == 1:
+                section.append(NoEscape("\\begin{multicols}{2}"))
+            self.__add_items(section)
+            if self.depth == 1:
+                section.append(NoEscape("\\end{multicols}"))
+            book.append(section)
         else:
-            for item in self.items:
-                try:
-                    self.items[item].add_to_book(book)
-                except TypeError:
-                    item.add_to_book(book)
+            self.__add_items(book)
 
     def find_item(self, name):
         for item in self.items:
@@ -63,6 +63,3 @@ class ListFile(SubList):
     def __init__(self, name, filename):
         yaml_doc = yaml.load(open(filename, mode='r', encoding="utf-8"), Loader=yaml.FullLoader)
         super().__init__(0, name, yaml_doc)
-
-
-

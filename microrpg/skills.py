@@ -1,9 +1,8 @@
-from .book import Book
-
-from pylatex import Subsection
-from pylatex.utils import bold
-from pylatex.basic import *
 import yaml
+from pylatex.basic import NewLine
+from pylatex.utils import bold
+
+from .book import Book
 
 
 class Skill:

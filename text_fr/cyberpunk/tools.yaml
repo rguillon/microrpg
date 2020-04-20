@@ -11,3 +11,51 @@
         desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
         effects:
             - 'Attaque': +4
+    - !item
+        name : 'Multitool'
+        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+        effects:
+            - 'Attaque' : +2
+            - 'Bricolage': +2
+
+    - !item
+        name: 'Machette'
+        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
+        effects:
+            - 'Attaque': +4
+    - !item
+        name : 'Multi2tool'
+        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+        effects:
+            - 'Attaque' : +2
+            - 'Bricolage': +2
+
+    - !item
+        name: 'Machette'
+        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
+        effects:
+            - 'Attaque': +4
+    - !item
+        name : 'Multi1tool'
+        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+        effects:
+            - 'Attaque' : +2
+            - 'Bricolage': +2
+
+    - !item
+        name: 'Mach3ette'
+        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
+        effects:
+            - 'Attaque': +4
+    - !item
+        name : 'Multi4tool'
+        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+        effects:
+            - 'Attaque' : +2
+            - 'Bricolage': +2
+
+    - !item
+        name: 'Mach5ette'
+        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
+        effects:
+            - 'Attaque': +4

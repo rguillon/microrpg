@@ -1,15 +1,13 @@
 # coding: utf-8
 
-from pylatex import Subsection
 import yaml
-
-from pylatex import Document, Tabularx, NoEscape
-from pylatex.utils import bold
+from pylatex import NoEscape
 from pylatex.basic import *
+from pylatex.utils import bold
 
 from .book import Book
 
-__singleton__ = None
+__effectors__ = {}
 
 
 class Effector:
@@ -17,6 +15,9 @@ class Effector:
         self.name = name
         self.desc = desc
         self.cost_effect = cost_effect
+
+        global __effectors__
+        __effectors__[name] = self
 
     def __repr__(self):
         return str(self.name + " : " + self.desc + " : " + str(self.cost_effect))
@@ -43,6 +44,6 @@ yaml.add_constructor('!effector', effector_constructor)
 
 def get_effector(name):
     try:
-        return __singleton__.find_item(name)
+        return __effectors__[name]
     except AttributeError as e:
         raise ValueError(e)
