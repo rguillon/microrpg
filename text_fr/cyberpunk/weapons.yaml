@@ -1,61 +1,29 @@
-'Armes blanches':
-    - !item
-        name : 'Multitool'
-        desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
-        effects:
-            - 'Attaque' : +2
-            - 'Bricolage': +2
-
-    - !item
-        name: 'Machette'
-        desc: 'Machette en acier brut, poignée en plastique sur une lame de 45cm'
-        effects:
-            - 'Attaque': +4
-
-
-'Pistolets':
-    - !item
-        name : 'Beretha 9mm'
-        desc: 'Pistolet  9mm B'
-        effects:
-            - 'Attaque' : +5
-        modifs:
-            - 'Longue portée'
-    - !item
-        name: 'Beretha 12mm'
-        desc: 'Pistolet  12mm B'
-        effects:
-            - 'Attaque': +90
-        modifs:
-            - 'Longue portée'
-
-'Fusils':
-    - !item
-        name : 'Beretha 9mm'
-        desc: 'Pistolet  9mm B'
-        effects:
-            - 'Attaque' : +5
-        modifs:
-            - 'Longue portée'
-    - !item
-        name: 'Beretha 12mm'
-        desc: 'Pistolet  12mm B'
-        effects:
-            - 'Attaque': +90
-        modifs:
-            - 'Longue portée'
-'Mistrailleuses':
-    - !item
-        name : 'Beretha 9mm'
-        desc: 'Pistolet  9mm B'
-        effects:
-            - 'Attaque' : +5
-        modifs:
-            - 'Longue portée'
-    - !item
-        name: 'Beretha 12mm'
-        desc: 'Pistolet  12mm B'
-        effects:
-            - 'Attaque': +90
-        modifs:
-            - 'Longue portée'
+'Armes':
+    'Armes blanches':
+        - !item
+            name : 'Multitool'
+            desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+            effects:
+                - 'Attaque' : +2
+                - 'Bricolage': +2
+                - 'Bricolarge': +2
+                - 'Bricolerage': +2
+            permanent_effects:
+                - 'DEXT': -1
+                - 'INT': +4
+            modifs:
+                  - 'Très longue portée'
+                  - 'Longue portée'
+                  - 'Usage unique'
+        - !item
+            name: 'Multitoosdfl'
+            desc: 'Couteau multi-fonction an acier inoxidable, lames chomées.'
+            effects:
+                - 'Attaque': +2
+                - 'Bricolage': +2
+                - 'Bricolarge': +2
+                - 'Bricolerage': +2
+            modifs:
+                - 'Très longue portée'
+                - 'Longue portée'
+                - 'Usage unique'

@@ -60,6 +60,6 @@ class SubList:
 
 
 class ListFile(SubList):
-    def __init__(self, name, filename):
+    def __init__(self, name: str, filename: str, first_level: int =0):
         yaml_doc = yaml.load(open(filename, mode='r', encoding="utf-8"), Loader=yaml.FullLoader)
-        super().__init__(0, name, yaml_doc)
+        super().__init__(first_level, name, yaml_doc)

@@ -22,8 +22,6 @@ class Book(Document):
         self.preamble.append(Command('usepackage', 'siunitx'))
         self.preamble.append(Command('usepackage', 'pdflscape'))
         self.preamble.append(Command('usepackage[french]', 'babel'))
-       # self.preamble.append(Command('usepackage[table]', 'xcolor'))
-
         self.filename = filename
 
     def add_tex_src(self, filename: str):

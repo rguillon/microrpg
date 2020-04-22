@@ -26,14 +26,14 @@ def build_cyberpunk_book():
     effector_file = ListFile("Equipements", "text_fr/cyberpunk/effectors.yaml")
     microrpg.effector.__singleton__ = effector_file
     weapons_file = ListFile(None, "text_fr/cyberpunk/weapons.yaml")
-    tools_file = ListFile(None, "text_fr/cyberpunk/tools.yaml")
+    #tools_file = ListFile(None, "text_fr/cyberpunk/tools.yaml")
 
     cyberpunk_book = Book('microCyberpunk', "out/cp2020")
     cyberpunk_book.add_tex_src("text_fr/cyberpunk/cyberpunk.tex")
     skills_file.add_to_book(cyberpunk_book)
     effector_file.add_to_book(cyberpunk_book)
     weapons_file.add_to_book(cyberpunk_book)
-    tools_file.add_to_book(cyberpunk_book)
+    #tools_file.add_to_book(cyberpunk_book)
     cyberpunk_book.to_pdf()
 
 
